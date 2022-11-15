@@ -13,9 +13,6 @@ jobs:
   build:
 
     runs-on: ubuntu-latest
-    defaults:
-      run:
-        working-directory: drivel-ui
 
     strategy:
       matrix:
@@ -29,6 +26,10 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
+        working-directory: drivel-ui
     - run: npm ci
+      working-directory: drivel-ui
     - run: npm run build --if-present
+      working-directory: drivel-ui
     - run: npm test
+      working-directory: drivel-ui
