@@ -31,5 +31,3 @@ jobs:
       working-directory: drivel-ui
     - run: npm run build --if-present
       working-directory: drivel-ui
-    - run: npm test
-      working-directory: drivel-ui
