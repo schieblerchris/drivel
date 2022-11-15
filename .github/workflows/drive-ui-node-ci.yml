@@ -3,7 +3,11 @@
 
 name: Drivel UI Node CI
 
-on: [push]
+on:
+  push:
+    branches:    
+      - 'main'
+      - '*-ui/*' #every branch destined for ui 
 
 jobs:
   build:
